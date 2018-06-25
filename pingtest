@@ -1,5 +1,10 @@
 #!/bin/bash -e
-echo == multi-ping test tool v1.0 ==
+echo ===============================
+echo == Multi-ping test tool v1.0 ==
+echo ===============================
+
+# this is a comment.
+
 quiet_mode=0
 server_list=$@
 
