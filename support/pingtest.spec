@@ -1,8 +1,7 @@
 %define buildroot %{_topdir}/BUILDROOT/
-%define release __RELEASE__
 
 Name:       pingtest
-Version:    1.%{release}
+Version:    1.0
 Release:    1%{?dist}
 Summary:    multi-pinger
 BuildRoot:  %{buildroot}

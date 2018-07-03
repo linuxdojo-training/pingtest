@@ -20,7 +20,3 @@ for server in $server_list; do
             fping $server
     fi
 done
-
-if [ $quiet_mode == 0 ]; then
-    echo Done!
-fi
