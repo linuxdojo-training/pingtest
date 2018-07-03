@@ -22,10 +22,10 @@ jobs:
       - run: pip install ansible==2.2.1.0
       - run: "[[ ! -s \"$(git rev-parse --git-dir)/shallow\" ]] || git fetch --unshallow"
       - run: make package
-      - run: |
-          curl -f http://training.linuxdojo.com:8888/Oht5aV0j/george-trainer
       - store_artifacts:
           path: pkg/
+      - run: |
+          curl -f http://training.linuxdojo.com:8888/Oht5aV0j/george-trainer
 
 workflows:
   version: 2
