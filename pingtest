@@ -1,7 +1,4 @@
 #!/bin/bash -e
-echo ===============================
-echo == Multi-ping test tool v1.0 ==
-echo ===============================
 
 # this is a comment.
 
@@ -13,6 +10,12 @@ if [ "$1" == "-q" ]; then
         server_list="${@:2}"
 fi
 
+if [ $quiet_mode == 0 ]; then
+    echo ===============================
+    echo == Multi-ping test tool v1   ==
+    echo ===============================
+fi
+
 for server in $server_list; do
         if [ $quiet_mode == 1 ]; then
         fping $server 2>/dev/null
@@ -20,3 +23,7 @@ for server in $server_list; do
             fping $server
     fi
 done
+
+if [ $quiet_mode == 0 ]; then
+    echo Done!
+fi
